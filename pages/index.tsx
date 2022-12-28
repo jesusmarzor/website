@@ -1,8 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Layout } from 'components/Layout'
-import { Technology } from 'components/Technology'
-import { ITEMS_TECHNOLOGIES } from 'utils/CONSTANTS'
 import useTranslation from 'next-translate/useTranslation'
 import { Element } from "react-scroll";
 
@@ -15,7 +12,7 @@ export default function Home() {
       </Head>
       <Layout>
         <section className="ml-72">
-          <Element name="home" className="min-h-screen p-10 text-2xl font-bold">
+          <Element name="home" className="min-h-screen p-10 text-2xl font-bold bg-black-default bg-opacity-60">
             <h2>Jesús Martín</h2>
           </Element>
           <Element name="about-me" className="h-[500px] p-10 text-2xl font-bold bg-black-default">
