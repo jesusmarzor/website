@@ -2,6 +2,8 @@ import { Link } from "react-scroll"
 import Image from "next/image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import useHeader from "hooks/useHeader"
+import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { itemsSSNN } from "utils/CONSTANTS"
 
 export const Header = () => {
     const {items} = useHeader()
@@ -22,13 +24,26 @@ export const Header = () => {
                     return (
                         <li key={item.text}>
                             <Link to={item.section} activeClass="Link__active" spy={true} smooth={true} offset={0} duration={800} className="flex justify-start gap-2 items-center tracking-wider w-full pl-16 py-4 uppercase cursor-pointer">
-                                <FontAwesomeIcon className="Icon w-5" icon={item.icon}/>
+                                <FontAwesomeIcon className="Icon w-4" icon={item.icon}/>
                                 {item.text}
                             </Link>
                         </li>
                     )
                 })
             }
+            </ul>
+            <ul className="flex justify-center items-center gap-6">
+                {
+                    itemsSSNN.map( (item) => {
+                        return (
+                            <li key={item.url}>
+                                <a href={item.url} target="_blank">
+                                    <FontAwesomeIcon className="w-6" icon={item.icon}/>
+                                </a>
+                            </li>
+                        )
+                    })
+                }
             </ul>
         </header>
     )

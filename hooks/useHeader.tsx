@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { faComment, faContactBook, faFolder, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faContactBook, faFolder, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 import ItemHeader from "types/ItemHeader"
 import useTranslation from "next-translate/useTranslation"
+import { SECTIONS } from "enums/SECTIONS"
 
 export default () => {
     const { t } = useTranslation("common")
@@ -12,27 +13,22 @@ export default () => {
             {
                 icon: faHome,
                 text: t("home"),
-                section: "home"
+                section: SECTIONS.HOME
             },
             {
                 icon: faUser,
                 text: t("about-me"),
-                section: "about-me"
+                section: SECTIONS.ABOUT_ME
             },
             {
                 icon: faFolder,
                 text: t("projects"),
-                section: "projects"
-            },
-            {
-                icon: faComment,
-                text: t("blog"),
-                section: "blog"
+                section: SECTIONS.PROJECTS
             },
             {
                 icon: faContactBook,
                 text: t("contact"),
-                section: "contact"
+                section: SECTIONS.CONTACT
             }
         ])
     }, [])
