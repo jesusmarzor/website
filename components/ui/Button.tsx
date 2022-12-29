@@ -7,6 +7,7 @@ interface props {
     isLink?: boolean
     goSection?: string
 }
+
 export const Button: React.FC<props> = ({type, isLink = false, goSection, children}) => {
     return(
         (isLink) ?
