@@ -9,7 +9,7 @@ export const AboutMe = () => {
     const { t: t_about_me } = useTranslation("about-me")
     return(
         <Element name={SECTIONS.ABOUT_ME} className="p-10 bg-black-default">
-            <h2 className="text-5xl text-center font-bold">{t_common("about-me")}</h2>
+            <h2 className="text-4xl text-center font-bold">{t_common("about-me")}</h2>
             <div className="flex justify-center align-center my-10">
                 <div className="w-6/12 mr-10 py-5">
                     <section className="mb-5">
