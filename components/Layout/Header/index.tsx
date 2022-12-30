@@ -1,6 +1,8 @@
 import { SocialNetworks } from "components/Layout/Header/SocialNetworks"
 import { Navigation } from "components/Layout/Header/Navigation"
 import Image from "next/image"
+import { Button } from "components/ui/Button"
+import { TYPES_BUTTONS } from "enums/TYPES_BUTTONS"
 export const Header = () => {
     
     return(
@@ -15,6 +17,7 @@ export const Header = () => {
                 />
             </div>
             <Navigation/>
+            <Button type={TYPES_BUTTONS.DOWNLOAD} file="CV_ES.pdf" nameFile="Jesus-Martín-CV">Download CV</Button>
             <SocialNetworks/>
         </header>
     )

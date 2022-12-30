@@ -4,14 +4,17 @@ import { faGitAlt, faGithub, faInstagram, faLinkedin, faReact, faSass, faSwift }
 
 export const SOCIAL_NETWORKS: SocialNetwork[] = [
     {
+        name: "Github",
         icon: faGithub,
         url: "https://github.com/jesusmarzor"
     },
     {
+        name: "Linkedin",
         icon: faLinkedin,
         url: "https://linkedin.es/in/jesusmarzor"
     },
     {
+        name: "Instagram",
         icon: faInstagram,
         url: "https://instagram.com/jesusmarzor"
     }

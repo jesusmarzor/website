@@ -8,7 +8,7 @@ export const SocialNetworks = () => {
             SOCIAL_NETWORKS.map( item => {
                 return (
                     <li key={item.url}>
-                        <a href={item.url} target="_blank">
+                        <a href={item.url} target="_blank" rel="noreferrer" title={item.name}>
                             <FontAwesomeIcon className="w-6" icon={item.icon}/>
                         </a>
                     </li>
