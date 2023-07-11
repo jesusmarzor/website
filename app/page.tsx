@@ -3,7 +3,6 @@ export default function Home() {
     <>
     <title>Portfolio - Jesusmarzor</title>
     <meta name="description" content=""/>
-    <h1 className="">Portfolio</h1>
    </>
   )
 }
