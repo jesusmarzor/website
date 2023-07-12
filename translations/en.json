@@ -1,6 +1,18 @@
 {
     "common": {
         "home": "Home",
-        "aboutMe": "About me"
+        "aboutMe": "About me",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "language": {
+        "spanish": {
+            "name": "Spanish",
+            "code": "spa"
+        },
+        "english": {
+            "name": "English",
+            "code": "eng"
+        }
     }
 }

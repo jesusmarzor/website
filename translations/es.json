@@ -1,6 +1,16 @@
 {
     "common": {
         "home": "Inicio",
-        "aboutMe": "Sobre mí"
+        "aboutMe": "Sobre mí",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "language": {
+        "spanish": {
+            "name": "Español"
+        },
+        "english": {
+            "name": "Inglés"
+        }
     }
 }

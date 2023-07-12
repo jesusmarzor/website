@@ -4,6 +4,9 @@ import translation_es from "translations/es.json";
 import translation_en from "translations/en.json";
 import { languages } from "utils/CONSTANTS";
 
+
+const languagesCode = languages.map( lng => lng.code)
+
 i18n
   .use(initReactI18next)
   .init({
@@ -15,8 +18,8 @@ i18n
         translation: translation_en
       }
     },
-    lng: localStorage.getItem("lang") || languages.es,
-    fallbackLng: languages.es,
+    lng: localStorage.getItem("lang") || languagesCode.shift(),
+    fallbackLng: languagesCode.shift(),
 
     interpolation: {
       escapeValue: false
