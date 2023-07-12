@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className="max-w-7xl mx-auto">
+      <body className={inter.className + " bg-black-default text-light-default"}>
+        <main>
           <Header/>
           {children}
         </main>

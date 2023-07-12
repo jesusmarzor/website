@@ -1,4 +1,4 @@
-import { Language } from "next-env";
+import { Language } from "utils/interfaces";
 
 export const languages: Language[] = [
     {
