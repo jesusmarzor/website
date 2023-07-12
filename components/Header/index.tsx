@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
 import { FaSun } from "react-icons/fa"
@@ -9,7 +10,7 @@ export const Header: React.FC = () => {
     return(
         <header className="p-6 bg-black-light">
             <nav className="flex justify-between items-center gap-4 max-w-7xl mx-auto">
-                <Link href="/" className="text-2xl mr-auto">
+                <Link href="/" rel="preload" className="text-2xl mr-auto">
                     <span className="font-bold">Jesús</span> Martín
                 </Link>
                 <ul className="flex gap-4">
