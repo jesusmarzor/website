@@ -1,4 +1,3 @@
-"use client"
 import { LanguageModalConsumer } from "contexts/LanguageModalContext"
 import { useTranslation } from "react-i18next"
 import { Languages } from "lucide-react"

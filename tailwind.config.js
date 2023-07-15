@@ -6,6 +6,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -26,8 +27,11 @@ module.exports = {
         orange: {
           default: "#feb633"
         }
+      },
+      transitionProperty: {
+        backgroundSize: "background-size"
       }
-    },
+    }
   },
   plugins: [],
   darkMode: 'class',
