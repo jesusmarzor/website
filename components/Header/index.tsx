@@ -1,14 +1,14 @@
 "use client"
 import Link from "next/link"
 import { useTranslation } from "react-i18next"
-import { FaSun } from "react-icons/fa"
-import { LanguageIcon } from "./LanguageIcon"
+import { LanguageIcon } from "components/Header/LanguageIcon"
+import { ThemeIcon } from "./ThemeIcon"
 
 export const Header: React.FC = () => {
     const { t } = useTranslation()
 
     return(
-        <header className="p-6 bg-black-light">
+        <header className="p-6 bg-white dark:bg-black-light">
             <nav className="flex justify-between items-center gap-4 max-w-7xl mx-auto">
                 <Link href="/" rel="preload" className="text-2xl mr-auto">
                     <span className="font-bold">Jesús</span> Martín
@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
                     <li>{t("common.projects")}</li>
                     <li>{t("common.contact")}</li>
                 </ul>
-                <FaSun className="ml-auto text-2xl"/>
+                <ThemeIcon/>
                 <LanguageIcon/>
             </nav>
         </header>

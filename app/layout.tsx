@@ -4,6 +4,7 @@ import ContentLayout from './contentLayout'
 import "app/globals.css"
 import "config/i18n"
 import { LanguageModalProvider } from 'contexts/LanguageModalContext'
+import useThemeIcon from 'hooks/useThemeIcon'
 const inter = Open_Sans({ subsets: ['latin'] })
 
 export default function RootLayout({
@@ -11,9 +12,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const { isDark } = useThemeIcon()
+
   return (
-    <html lang="en">
-      <body className={inter.className + " bg-black-default text-light-default"}>
+    <html lang="en" className={`${isDark() && 'dark'}`}>
+      <body className={inter.className + " bg-light-default text-black-default dark:bg-black-default dark:text-light-default"}>
         <LanguageModalProvider>
           <ContentLayout>
             {children}
