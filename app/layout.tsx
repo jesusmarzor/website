@@ -5,6 +5,7 @@ import "app/globals.css"
 import "config/i18n"
 import { LanguageModalProvider } from 'contexts/LanguageModalContext'
 import useThemeIcon from 'hooks/useThemeIcon'
+import { MenuMobileProvider } from 'contexts/MenuMobileContext'
 const inter = Open_Sans({ subsets: ['latin'] })
 
 export default function RootLayout({
@@ -18,9 +19,11 @@ export default function RootLayout({
     <html lang="en" className={`${isDark() && 'dark'}`}>
       <body className={inter.className + " bg-light-default text-black-default dark:bg-black-default dark:text-light-default"}>
         <LanguageModalProvider>
-          <ContentLayout>
-            {children}
-          </ContentLayout>
+          <MenuMobileProvider>
+            <ContentLayout>
+              {children}
+            </ContentLayout>
+          </MenuMobileProvider>
         </LanguageModalProvider>
       </body>
     </html>

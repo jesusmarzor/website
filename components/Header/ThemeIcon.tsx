@@ -5,7 +5,7 @@ export const ThemeIcon: React.FC = () => {
     const {isDark, iconRef, didTapThemeIcon} = useThemeIcon()
     
     return(
-        <div ref={iconRef} onClick={didTapThemeIcon} className="ml-auto">
+        <div ref={iconRef} onClick={didTapThemeIcon}>
             <Sun className={`${!isDark() && "hidden"}`}/>
             <Moon className={`${isDark() && "hidden"}`}/>
         </div>

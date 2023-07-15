@@ -29,7 +29,8 @@ module.exports = {
         }
       },
       transitionProperty: {
-        backgroundSize: "background-size"
+        backgroundSize: "background-size",
+        transform: "transform"
       }
     }
   },
