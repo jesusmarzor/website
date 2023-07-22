@@ -3,7 +3,8 @@
         "home": "Inicio",
         "aboutMe": "Sobre mí",
         "projects": "Proyectos",
-        "contact": "Contacto"
+        "contact": "Contacto",
+        "writeMe": "Escríbeme"
     },
     "language": {
         "spanish": {
@@ -12,5 +13,8 @@
         "english": {
             "name": "Inglés"
         }
+    },
+    "introduce": {
+        "description": "Desarrollador iOS y web"
     }
 }

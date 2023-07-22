@@ -11,9 +11,11 @@ export const languages: Language[] = [
     },
 ]
 
-export const authorName = {
-    name: "Jesús",
-    lastName: "Martín"
+export const authorName = "Jesús Martín"
+
+export const textLogo = {
+    name: "Jesus",
+    lastName: "marzor"
 }
 
 export const menuList: Menu[] = [

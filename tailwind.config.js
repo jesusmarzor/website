@@ -15,7 +15,7 @@ module.exports = {
       },
       colors: {
         light: {
-          default: "#c4cfde"
+          default: "#f3f3f3"
         },
         black: {
           default: "#1e2024",
@@ -26,6 +26,9 @@ module.exports = {
         },
         orange: {
           default: "#feb633"
+        },
+        white: {
+          default: "#ffffff"
         }
       },
       transitionProperty: {

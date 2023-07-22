@@ -17,7 +17,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${isDark() && 'dark'}`}>
-      <body className={inter.className + " bg-light-default text-black-default dark:bg-black-default dark:text-light-default"}>
+      <body className={inter.className + " bg-light-default text-black-default dark:bg-black-default dark:text-white-default"}>
         <LanguageModalProvider>
           <MenuMobileProvider>
             <ContentLayout>
