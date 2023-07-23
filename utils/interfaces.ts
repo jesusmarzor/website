@@ -15,3 +15,9 @@ export interface Project {
     url: string
     image: string
 }
+
+export interface FormErrors {
+    name?: string
+    email?: string
+    message?: string
+}

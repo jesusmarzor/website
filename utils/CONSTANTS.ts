@@ -36,3 +36,5 @@ export const menuList: Menu[] = [
         to: "contact"
     }
 ]
+
+export const mailRegex = /^([\da-z_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/

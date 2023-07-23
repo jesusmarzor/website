@@ -4,13 +4,23 @@ import { ButtonType } from "utils/enums";
 
 interface props {
     type: ButtonType
-    to: string
+    to?: string
     download?: string
     children: string
 }
 
 const Button: React.FC<props> = ({type, to, download, children}) => {
-    return <Link className="px-4 py-2 bg-orange-default rounded-md cursor-default dark:text-black-default text-white-default" to={to}>{children}</Link>
+    let classes = "px-4 py-2 bg-orange-default rounded-md cursor-default dark:text-black-default text-white-default active:scale-press duration-100"
+    switch (type) {
+        case ButtonType.link:
+            return <Link className={classes} to={to ?? ""}>{children}</Link>
+
+        case ButtonType.a:
+            return <a className={classes} href={to}>{children}</a>
+        
+        case ButtonType.input:
+            return <button type="submit" className={classes}>{children}</button>
+    }
 }
 
 export default React.memo(Button);

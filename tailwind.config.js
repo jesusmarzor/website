@@ -29,6 +29,9 @@ module.exports = {
         },
         white: {
           default: "#ffffff"
+        },
+        error: {
+          default: "#e14b41"
         }
       },
       transitionProperty: {
@@ -44,6 +47,9 @@ module.exports = {
       },
       screens: {
         minProject: "430px"
+      },
+      scale: {
+        press: "0.98"
       }
     }
   },
