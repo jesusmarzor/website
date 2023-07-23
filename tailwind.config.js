@@ -36,7 +36,8 @@ module.exports = {
         transform: "transform"
       },
       width: {
-        86: "22rem"
+        86: "22rem",
+        110: "30rem"
       },
       gridTemplateColumns: {
         'autoFill': "repeat(auto-fill, minmax(min(100%, 22rem), 1fr))"

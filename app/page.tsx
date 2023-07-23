@@ -1,4 +1,5 @@
 import { AboutMe } from "components/AboutMe";
+import { Contact } from "components/Contact";
 import { Introduce } from "components/Introduce";
 import { Projects } from "components/Projects";
 
@@ -10,6 +11,7 @@ export default function Home() {
     <Introduce/>
     <AboutMe/>
     <Projects/>
+    <Contact/>
     </>
   )
 }

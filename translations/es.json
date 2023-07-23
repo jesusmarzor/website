@@ -5,7 +5,10 @@
         "projects": "Proyectos",
         "contact": "Contacto",
         "writeMe": "Escríbeme",
-        "downloadCV": " Descargar CV"
+        "downloadCV": " Descargar CV",
+        "name": "Nombre",
+        "email": "Email",
+        "message": "Mensaje"
     },
     "language": {
         "spanish": {

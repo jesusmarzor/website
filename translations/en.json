@@ -5,7 +5,10 @@
         "projects": "Projects",
         "contact": "Contact",
         "writeMe": "Write me",
-        "downloadCV": " Download CV"
+        "downloadCV": " Download CV",
+        "name": "Name",
+        "email": "Mail",
+        "message": "Message"
     },
     "language": {
         "spanish": {
@@ -18,7 +21,7 @@
         }
     },
     "introduce": {
-        "description": "iOS and web develop"
+        "description": "iOS and web developer"
     },
     "aboutMe": {
         "p1": "I am Jesús Martín Zorrilla, a computer engineer. I consider myself a responsible, organized, and committed person in everything I do.",
