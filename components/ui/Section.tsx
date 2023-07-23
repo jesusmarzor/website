@@ -1,0 +1,21 @@
+import { ReactNode } from "react"
+import { Element } from "react-scroll"
+
+interface props {
+    name: string
+    title: string
+    sectionClasses?: string
+    titleClasses?: string
+    children: ReactNode
+}
+
+const Section: React.FC<props> = ({name, title, sectionClasses = null, titleClasses, children}) => {
+    return(
+        <Element name={name} className={`max-w-7xl mx-auto overflow-hidden pt-24 px-10 ${sectionClasses}`}>
+            <h2 className={`font-bold text-4xl ${titleClasses}`}>{title}</h2>
+            {children}
+        </Element>
+    )
+}
+
+export default Section
