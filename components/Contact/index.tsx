@@ -12,7 +12,7 @@ export const Contact: React.FC = () => {
     return(
         <Section name="contact" title={t("common.contact")} titleClasses="text-center">
             <Form {...formData}/>
-            <Message response={formData.response}/>
+            {formData.response !== null && <Message response={formData.response!}/>}
         </Section>
     )
 }
