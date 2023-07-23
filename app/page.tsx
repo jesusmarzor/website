@@ -1,4 +1,6 @@
+import { AboutMe } from "components/AboutMe";
 import { Introduce } from "components/Introduce";
+import { Projects } from "components/Projects";
 
 export default function Home() {
   return (
@@ -6,6 +8,8 @@ export default function Home() {
     <title>Portfolio - Jesusmarzor</title>
     <meta name="description" content=""/>
     <Introduce/>
+    <AboutMe/>
+    <Projects/>
     </>
   )
 }

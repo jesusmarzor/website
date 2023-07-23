@@ -34,6 +34,15 @@ module.exports = {
       transitionProperty: {
         backgroundSize: "background-size",
         transform: "transform"
+      },
+      width: {
+        86: "22rem"
+      },
+      gridTemplateColumns: {
+        'autoFill': "repeat(auto-fill, minmax(min(100%, 22rem), 1fr))"
+      },
+      screens: {
+        minProject: "430px"
       }
     }
   },
