@@ -30,6 +30,10 @@
     "error": {
         "name": "Introduce tu nombre.",
         "email": "Introduce un correo correcto.",
-        "message": "Introduce tu mensaje."
+        "message": "Introduce tu mensaje.",
+        "sent": "!Error al enviar el mensaje!"
+    },
+    "success": {
+        "sent": "!Mensaje enviado con éxito!"
     }
 }

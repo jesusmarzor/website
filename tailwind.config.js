@@ -32,6 +32,9 @@ module.exports = {
         },
         error: {
           default: "#e14b41"
+        },
+        success: {
+          default: "#a4d338"
         }
       },
       transitionProperty: {
@@ -50,6 +53,15 @@ module.exports = {
       },
       scale: {
         press: "0.98"
+      },
+      keyframes: {
+        messageBottom: {
+          '0%': { bottom: "-10rem" },
+          '100%': { bottom: "1.25rem" },
+        }
+      },
+      animation: {
+        message: "messageBottom 300ms linear",
       }
     }
   },

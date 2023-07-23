@@ -6,7 +6,7 @@ export default (name: string, email: string, message: string, setError: (errors:
     if(name.length === 0) {
         errors.name = "error.name"
     }
-	if(!(mailRegex).exec(email)){
+	if(!(mailRegex).exec(email.toLocaleLowerCase())){
 		errors.email = "error.email"
     }
     if(message.length === 0) {

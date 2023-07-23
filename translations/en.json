@@ -32,6 +32,10 @@
     "error": {
         "name": "Introduce your name.",
         "email": "Introduce a correct email.",
-        "message": "Introduce your message"
+        "message": "Introduce your message.",
+        "sent": "Error while sending message!"
+    },
+    "success": {
+        "sent": "Message sent succesfully!"
     }
 }
