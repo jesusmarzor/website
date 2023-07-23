@@ -4,7 +4,8 @@
         "aboutMe": "About me",
         "projects": "Projects",
         "contact": "Contact",
-        "writeMe": "Write me"
+        "writeMe": "Write me",
+        "downloadCV": " Download CV"
     },
     "language": {
         "spanish": {
@@ -18,5 +19,10 @@
     },
     "introduce": {
         "description": "iOS and web develop"
+    },
+    "aboutMe": {
+        "p1": "I am Jesús Martín Zorrilla, a computer engineer. I consider myself a responsible, organized, and committed person in everything I do.",
+        "p2": "I have worked as React developer and now I am working as iOS developer. Thanks to my curiosity and professional experience, I feel that I can achieve everything I set my mind to.",
+        "p3": "I leave direct links to my projects and my resume."
     }
 }
