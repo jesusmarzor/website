@@ -14,7 +14,6 @@ const useProjects = () => {
         .select()
         .eq("lang", i18n.language)
         .then( res => {
-            console.log("Llamada")
             let projects = res.data as Project[]
             projects?.sort((a, b) => b.id - a.id)
             setProjects(projects ?? [])
