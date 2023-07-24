@@ -17,10 +17,13 @@ const Button: React.FC<props> = ({classes, type, to, download, children}) => {
             return <Link className={`${buttonClass} ${classes}`} to={to ?? ""} spy={true} smooth={true} offset={0} duration={800}>{children}</Link>
 
         case ButtonType.a:
-            return <a className={`${buttonClass} ${classes}`} href={to}>{children}</a>
+            return <a className={`${buttonClass} ${classes}`} href={to} target="_blank" rel="noreferrer">{children}</a>
         
         case ButtonType.input:
             return <button type="submit" className={`${buttonClass} ${classes}`}>{children}</button>
+
+        case ButtonType.download:
+            return <a className={`${buttonClass} ${classes}`} href={to} target="_blank" rel="noreferrer" download={download}>{children}</a>
     }
 }
 

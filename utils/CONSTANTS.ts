@@ -40,6 +40,8 @@ export const menuList: Menu[] = [
 
 export const mailRegex = /^([\da-z_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/
 
+export const projectsUrl = "https://github.com/jesusmarzor"
+
 export const socialNetworks: SocialNetwork[] = [
     {
         icon: Linkedin,
@@ -47,7 +49,7 @@ export const socialNetworks: SocialNetwork[] = [
     },
     {
         icon: Github,
-        url: "https://github.com/jesusmarzor"
+        url: projectsUrl
     },
     {
         icon: Instagram,

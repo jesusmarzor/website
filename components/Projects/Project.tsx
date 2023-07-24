@@ -5,7 +5,7 @@ import { Project as ProjectInterface } from "utils/interfaces"
 const Project: React.FC<ProjectInterface> = ({image, title, description, url}) => {
     return(
         <li className="border border-black-default dark:border-white-default w-full minProject:w-86 mx-auto rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noreferrer">
                 <Image
                     src={image}
                     width={1200}
