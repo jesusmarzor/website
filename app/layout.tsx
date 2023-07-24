@@ -7,7 +7,7 @@ import { LanguageModalProvider } from 'contexts/LanguageModalContext'
 import useThemeIcon from 'hooks/useThemeIcon'
 import { MenuMobileProvider } from 'contexts/MenuMobileContext'
 import { ProjectsProvider } from 'contexts/ProjectsContext'
-import { Loader } from 'components/Loader'
+import { Loader } from 'components/LoaderPage'
 import { LoaderPageProvider } from 'contexts/LoaderPageContext'
 const inter = Open_Sans({ subsets: ['latin'] })
 
