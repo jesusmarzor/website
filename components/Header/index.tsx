@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
                         <span className="font-bold">{textLogo.name}</span>{textLogo.lastName}
                     </Link>
                 </h1>
-                <MenuList classesName={`mr-auto fixed w-80 md:w-auto right-0 top-28 bottom-8 z-10 rounded-bl-xl rounded-tl-xl flex flex-col justify-center items-center gap-16 text-2xl md:text-base md:static md:flex-row md:gap-4 ${isShowedMenu ? "translate-x-0"  : "translate-x-80"} bg-white dark:bg-black-light border md:border-0 border-black-extra-light md:translate-x-0 transition-transform duration-500`}/>
+                <MenuList classesName={`mr-auto fixed w-80 md:w-auto right-0 top-28 bottom-8 z-10 rounded-bl-xl rounded-tl-xl flex flex-col justify-center items-center gap-16 text-2xl md:text-base md:static md:flex-row md:gap-4 ${isShowedMenu ? "translate-x-0"  : "translate-x-80"} bg-white-default dark:bg-black-light border md:border-0 border-black-extra-light md:translate-x-0 transition-transform duration-500`}/>
                 <ThemeIcon/>
                 <LanguageIcon/>
                 {
