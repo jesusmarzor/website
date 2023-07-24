@@ -1,4 +1,5 @@
-import { Language, Menu } from "utils/interfaces";
+import { Language, Menu, SocialNetwork } from "utils/interfaces";
+import { Github, Instagram, Linkedin } from "lucide-react";
 
 export const languages: Language[] = [
     {
@@ -38,3 +39,18 @@ export const menuList: Menu[] = [
 ]
 
 export const mailRegex = /^([\da-z_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/
+
+export const socialNetworks: SocialNetwork[] = [
+    {
+        icon: Linkedin,
+        url: "https://linkedin.com/in/jesusmarzor"
+    },
+    {
+        icon: Github,
+        url: "https://github.com/jesusmarzor"
+    },
+    {
+        icon: Instagram,
+        url: "https://instagram.com/jesusmarzor"
+    }
+]

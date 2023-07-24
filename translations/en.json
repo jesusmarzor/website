@@ -37,5 +37,6 @@
     },
     "success": {
         "sent": "Message sent succesfully!"
-    }
+    },
+    "copy": "All rights reserved."
 }

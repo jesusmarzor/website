@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react"
+
 export interface Language {
     nameKey: string
     code: string
@@ -20,4 +22,9 @@ export interface FormErrors {
     name?: string
     email?: string
     message?: string
+}
+
+export interface SocialNetwork {
+    icon: LucideIcon,
+    url: string
 }

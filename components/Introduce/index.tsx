@@ -1,4 +1,5 @@
 "use client"
+import { SocialNetworks } from "components/SocialNetworks"
 import Button from "components/ui/Button"
 import Image from "next/image"
 import { useTranslation } from "react-i18next"
@@ -15,6 +16,7 @@ export const Introduce: React.FC = () => {
                     <h2 className="text-6xl font-bold">{authorName}</h2>
                     <p className="py-4 text-xl font-semibold">{t("introduce.description")}</p>
                     <Button type={ButtonType.link} to="contact">{t("common.writeMe")}</Button>
+                    <SocialNetworks classes="!justify-start my-8"/>
                 </section>
                 <Image
                 src="/img/profile.png"
