@@ -43,13 +43,15 @@ module.exports = {
       },
       width: {
         86: "22rem",
+        105: "28.125rem",
         110: "30rem"
       },
       gridTemplateColumns: {
         'autoFill': "repeat(auto-fill, minmax(min(100%, 22rem), 1fr))"
       },
       screens: {
-        minProject: "430px"
+        minProject: "430px",
+        minIntroduce: "920px"
       },
       scale: {
         press: "0.98"
