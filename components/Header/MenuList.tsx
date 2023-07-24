@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import { menuList } from "utils/constants"
 import { Link } from "react-scroll"
 import { MenuMobileConsumer } from "contexts/MenuMobileContext"
-import { ProjectsConsumer } from "contexts/Projects"
+import { ProjectsConsumer } from "contexts/ProjectsContext"
 import { Menu } from "utils/interfaces"
 
 interface props {

@@ -2,7 +2,7 @@
 import Section from "components/ui/Section"
 import Project from "components/Projects/Project"
 import { useTranslation } from "react-i18next"
-import { ProjectsConsumer } from "contexts/Projects"
+import { ProjectsConsumer } from "contexts/ProjectsContext"
 
 export const Projects: React.FC = () => {
     const { t } = useTranslation()

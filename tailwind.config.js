@@ -63,7 +63,7 @@ module.exports = {
         }
       },
       animation: {
-        message: "messageBottom 300ms linear",
+        message: "messageBottom 300ms linear"
       },
       borderWidth: {
         "0.5": "0.01rem"
