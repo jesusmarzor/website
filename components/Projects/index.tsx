@@ -10,7 +10,7 @@ export const Projects: React.FC = () => {
     return(
         projects.length !== 0 &&
         <Section name="projects" title={t("common.projects")} titleClasses="text-center">
-            <ul className="grid grid-cols-autoFill gap-8 items-center py-20">
+            <ul className="grid grid-cols-autoFill gap-8 items-center pt-20 pb-5">
                 {
                     projects?.map( (project) => {
                         return(
