@@ -20,7 +20,7 @@ interface props {
 export const Form: React.FC<props> = ({name, setName, email, setEmail, message, setMessage, errors, loading, sendMail}) => {
     const { t } = useTranslation()
     return (
-        <form className="flex flex-col gap-10 w-full sm:w-110 mx-auto my-10" method="POST" onSubmit={sendMail}>
+        <form className="flex flex-col gap-10 w-full sm:w-110 mx-auto my-12" method="POST" onSubmit={sendMail}>
             <Input title={t("common.name")} name="name" text={name} setText={setName}  error={errors.name}/>
             <Input title={t("common.email")} name="email" text={email} setText={setEmail} error={errors.email}/>
             <Input type={InputType.textarea} name="message" text={message} setText={setMessage} title={t("common.message")} error={errors.message}/>
