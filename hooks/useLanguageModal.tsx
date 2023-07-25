@@ -13,14 +13,12 @@ const useLanguageModal = () => {
         currentLang && i18n.changeLanguage(currentLang)
     }, [])
 
-    const changeLanguage = (lang: string, i18n: i18n) => {
+    const changeLanguage = (lang: string) => {
         i18n.changeLanguage(lang);
         localStorage.setItem('lang', lang);
     }
 
-    const isActiveLanguage = (lang: string): boolean => {
-        return (localStorage.getItem("lang") || languages[0]?.code) == lang
-    }
+    const isActiveLanguage = (lang: string): boolean => (i18n.language || languages[0]?.code) == lang
     
     return {isShowedModal, setIsShowedModal, languageIconRef, changeLanguage, isActiveLanguage}
 }

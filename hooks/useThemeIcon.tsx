@@ -1,26 +1,24 @@
-import { useRef } from "react";
+import { useEffect, useState } from "react";
+import { themeDefault } from "utils/constants";
+import { Theme } from "utils/enums";
 
 const useThemeIcon = () => {
-    const iconRef = useRef<HTMLDivElement>(null)
-    const isDark = () => localStorage.getItem("theme") === "dark" || localStorage.getItem("theme") === null
+    const [theme, setTheme] = useState<string>(themeDefault)
+
+    useEffect( () => {
+        let currentMode = localStorage.getItem("theme") ?? themeDefault
+        currentMode === Theme.dark  && document.documentElement.classList.add(Theme.dark)
+        currentMode !== themeDefault && setTheme(currentMode)
+    }, [])
 
     const didTapThemeIcon = () => {
-        let sunIcon: HTMLDivElement = iconRef?.current?.firstChild as HTMLDivElement
-        let moonIcon: HTMLDivElement = iconRef.current?.lastChild as HTMLDivElement
-        if (isDark()) {
-            moonIcon.classList.remove("hidden")
-            sunIcon.classList.add("hidden")
-            localStorage.setItem("theme", "light")
-            document.documentElement.classList.remove('dark');
-        } else {
-            sunIcon.classList.remove("hidden")
-            moonIcon.classList.add("hidden")
-            localStorage.setItem("theme", "dark")
-            document.documentElement.classList.add('dark');
-        }
+        let nextTheme = theme === Theme.dark ? Theme.light : Theme.dark
+        localStorage.setItem("theme", nextTheme)
+        setTheme(nextTheme)
+        document.documentElement.classList.toggle(Theme.dark);
     }
     
-    return {isDark, iconRef, didTapThemeIcon}
+    return {theme, didTapThemeIcon}
 }
 
 export default useThemeIcon

@@ -1,5 +1,6 @@
 import { Language, Menu, SocialNetwork } from "utils/interfaces";
 import { Github, Instagram, Linkedin } from "lucide-react";
+import { Theme } from "./enums";
 
 export const languages: Language[] = [
     {
@@ -13,6 +14,7 @@ export const languages: Language[] = [
 ]
 
 export const authorName = "Jesús Martín"
+export const loaderString = "JMZ"
 
 export const textLogo = {
     name: "Jesus",
@@ -56,3 +58,5 @@ export const socialNetworks: SocialNetwork[] = [
         url: "https://instagram.com/jesusmarzor"
     }
 ]
+
+export const themeDefault = Theme.dark

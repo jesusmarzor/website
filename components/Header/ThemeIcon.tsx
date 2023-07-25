@@ -1,13 +1,17 @@
 import useThemeIcon from "hooks/useThemeIcon"
 import { Moon, Sun } from "lucide-react"
+import { Theme } from "utils/enums"
 
 export const ThemeIcon: React.FC = () => {
-    const {isDark, iconRef, didTapThemeIcon} = useThemeIcon()
+    const {theme, didTapThemeIcon} = useThemeIcon()
     
     return(
-        <div ref={iconRef} onClick={didTapThemeIcon}>
-            <Sun className={`${!isDark() && "hidden"}`}/>
-            <Moon className={`${isDark() && "hidden"}`}/>
-        </div>
+        <button onClick={didTapThemeIcon}>
+            {
+                theme === Theme.dark ?
+                <Sun/> :
+                <Moon/>
+            }
+        </button>
     )
 }

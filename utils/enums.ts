@@ -5,3 +5,8 @@ export enum ButtonType {
 export enum InputType {
     text, textarea
 }
+
+export enum Theme {
+    light = "light",
+    dark = "dark"
+}

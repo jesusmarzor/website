@@ -4,7 +4,7 @@ import { Languages } from "lucide-react"
 import { languages } from "utils/constants"
 
 export const LanguageIcon: React.FC = () => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     const {isShowedModal, setIsShowedModal, languageIconRef, changeLanguage, isActiveLanguage} = LanguageModalConsumer()
     
     return(
@@ -16,7 +16,7 @@ export const LanguageIcon: React.FC = () => {
                         languages.map( lang => {
                             return (
                                 <li key={lang.code}>
-                                    <button className={`hover:text-orange-default dark:hover:bg-black-extra-light hover:bg-white-default w-full text-left pl-2 py-2 ${isActiveLanguage(lang.code) && "text-orange-default  pointer-events-none"}`} onClick={() => changeLanguage(lang.code, i18n)}>{t(lang.nameKey)}</button>
+                                    <button className={`hover:text-orange-default dark:hover:bg-black-extra-light hover:bg-white-default w-full text-left pl-2 py-2 ${isActiveLanguage(lang.code) && "text-orange-default  pointer-events-none"}`} onClick={() => changeLanguage(lang.code)}>{t(lang.nameKey)}</button>
                                 </li>
                             )
                         }) 
