@@ -35,6 +35,10 @@ export const menuList: Menu[] = [
         to: "projects"
     },
     {
+        titleKey: "common.blog",
+        to: "blog"
+    },
+    {
         titleKey: "common.contact",
         to: "contact"
     }

@@ -1,13 +1,13 @@
 import { LoaderPageConsumer } from "contexts/LoaderPageContext"
 import { useEffect, useState } from "react"
-import { Project } from "utils/interfaces"
+import { LoaderType, Project } from "utils/interfaces"
 import supabase from "utils/supabase"
 import { useTranslation } from "react-i18next";
 
 const useProjects = () => {
     const { i18n } = useTranslation()
     const [projects, setProjects] = useState<Project[]>([])
-    const { isShowed: loaderIsShowed, setIsShowed: setLoaderIsShowed} = LoaderPageConsumer()
+    const {isLoadingTypeShowed, hideLoader} = LoaderPageConsumer()
     useEffect(() => {
         supabase
         .from('Projects')
@@ -17,7 +17,7 @@ const useProjects = () => {
             let projects = res.data as Project[]
             projects?.sort((a, b) => b.id - a.id)
             setProjects(projects ?? [])
-            loaderIsShowed && setLoaderIsShowed(!loaderIsShowed)
+            isLoadingTypeShowed(LoaderType.projects) && hideLoader(LoaderType.projects)
         })
 
     }, [i18n.language])
