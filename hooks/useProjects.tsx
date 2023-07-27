@@ -13,10 +13,9 @@ const useProjects = () => {
         .from('Projects')
         .select()
         .eq("lang", i18n.language)
+        .order("created_at", {ascending: false})
         .then( res => {
-            let projects = res.data as Project[]
-            projects?.sort((a, b) => b.id - a.id)
-            setProjects(projects ?? [])
+            setProjects(res.data ?? [])
             isLoadingTypeShowed(LoaderType.projects) && hideLoader(LoaderType.projects)
         })
 
