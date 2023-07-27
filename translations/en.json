@@ -9,7 +9,8 @@
         "name": "Name",
         "email": "Mail",
         "message": "Message",
-        "send": "Send"
+        "send": "Send",
+        "blog": "Blog"
     },
     "language": {
         "spanish": {

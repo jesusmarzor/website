@@ -64,3 +64,7 @@ export const socialNetworks: SocialNetwork[] = [
 ]
 
 export const themeDefault = Theme.dark
+
+export const minDaysNewLabel: number = 3
+
+export const maxNumCardsInHomeSections: number = 3

@@ -32,8 +32,8 @@ export interface SocialNetwork {
 export interface Post {
     slug: string
     title: string
-    date: Date
-    tag: string
+    date: string
+    tags: string[]
     image: string
     markdown: string
     lang: string
