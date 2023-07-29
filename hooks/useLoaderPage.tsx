@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react"
 import { Loader, LoaderPageReturn, LoaderType } from "utils/interfaces"
 
-export default (): LoaderPageReturn => {
+export const useLoaderPage = (): LoaderPageReturn => {
     const [loaders, setLoaders] = useState<Loader[]>([
         {
             type: LoaderType.projects,
@@ -34,3 +34,5 @@ export default (): LoaderPageReturn => {
 
     return {loaderIsShowed, hideLoader, isLoadingTypeShowed}
 }
+
+export default useLoaderPage

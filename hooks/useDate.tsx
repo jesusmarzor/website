@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { minDaysNewLabel } from "utils/constants";
 
-export default () => {
+export const useDate = () => {
     const {i18n} = useTranslation()
 
     const getDateFromString = (dateString: string): Date => new Date(Date.parse(String(dateString)))
@@ -23,3 +23,5 @@ export default () => {
 
     return {getDateString, isShowedNew, isShowedPost}
 }
+
+export default useDate

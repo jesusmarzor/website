@@ -11,7 +11,7 @@ interface props {
     to: string
 }
 
-export default ({image, title, description, date, to}: props) => {
+export const Card =  ({image, title, description, date, to}: props) => {
     const { t } = useTranslation()
     const { isShowedNew, getDateString } = useDate()
     return (
@@ -40,3 +40,5 @@ export default ({image, title, description, date, to}: props) => {
         </li>
     )
 }
+
+export default Card
