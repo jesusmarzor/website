@@ -10,7 +10,8 @@
         "email": "Mail",
         "message": "Message",
         "send": "Send",
-        "blog": "Blog"
+        "blog": "Blog",
+        "new": "New"
     },
     "language": {
         "spanish": {

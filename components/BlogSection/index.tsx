@@ -19,7 +19,7 @@ export const BlogSection: React.FC = () => {
                         return (
                             <li key={post.slug} className="relative border border-black-default dark:border-white-default w-full h-full minProject:w-86 mx-auto rounded-xl hover:scale-105 transition-transform duration-300">
                                 { isShowedNew(post.date) &&
-                                <p className="rounded-full px-4 py-2 absolute -right-2 -top-2 bg-orange-default animate-bounce z-10">New</p>
+                                <p className="rounded-full px-4 py-2 absolute -right-2 -top-2 bg-orange-default animate-bounce z-10">{t("common.new")}</p>
                                 }
                                 <Link href={`blog/${post.slug}`} className="relative flex flex-col justify-start items-center h-full">
                                     <Image
