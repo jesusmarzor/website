@@ -1,4 +1,5 @@
 import { LucideIcon } from "lucide-react"
+import { CardType } from "utils/enums"
 
 export interface Language {
     nameKey: string

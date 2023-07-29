@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import supabase from "utils/supabase"
 import { LoaderType, Post } from "utils/interfaces";
 import { LoaderPageConsumer } from "contexts/LoaderPageContext";
-import useDate from "./useDatePost";
+import useDate from "./useDate";
 
 const usePosts = () => {
     const [posts, setPosts] = useState<Post[]>([])

@@ -11,7 +11,8 @@
         "message": "Mensaje",
         "send": "Enviar",
         "blog": "Blog",
-        "new": "Nuevo"
+        "new": "Nuevo",
+        "seeAll": "Ver todos"
     },
     "language": {
         "spanish": {
@@ -28,6 +29,9 @@
         "p1": "Soy Jesús Martín Zorrilla, ingeniero informático. Me considero una persona responsable, organizada e implicada en todo lo que hago.",
         "p2": "He trabajado como desarrollador web con React y ahora trabajo como desarrollador iOS. Gracias a mi curiosidad y a mi experiencia profesional siento que puedo conseguir todo lo que me proponga.",
         "p3": "Dejo enlaces directos a mis proyectos y a mi curriculum."
+    },
+    "blog": {
+        "minutesOfReading": "@ minutos de lectura"
     },
     "error": {
         "name": "Introduce tu nombre.",
