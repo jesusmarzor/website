@@ -26,9 +26,12 @@ export const Header: React.FC = () => {
                 <ThemeIcon/>
                 <LanguageIcon/>
                 {
-                    isShowedMenu ?
-                    <X className="md:hidden" onClick={didTapMenuIcon}/> :
-                    <Menu className="md:hidden" onClick={didTapMenuIcon}/>
+                    pathname === '/' &&
+                    (
+                        isShowedMenu ?
+                        <X className="md:hidden" onClick={didTapMenuIcon}/> :
+                        <Menu className="md:hidden" onClick={didTapMenuIcon}/>
+                    )
                 }
             </nav>
         </header>
