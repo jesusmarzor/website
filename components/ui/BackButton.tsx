@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react"
+import { ChevronLeft } from "lucide-react"
 import { usePathname, useRouter } from "next/navigation"
 
 export const BackButton = () => {
@@ -12,7 +12,7 @@ export const BackButton = () => {
     }
     return(
         <button onClick={ goToBack }>
-            <ArrowLeft/>
+            <ChevronLeft size={30}/>
         </button>
     )
 }

@@ -17,7 +17,7 @@ const Blog = () => {
         <>
         <title>Blog - Jesusmarzor</title>
         <meta name="description" content=""/>
-        <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-10 w-full">
+        <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>
                 <Search onSubmit={didTapSearch} setText={setText} placeholder={t("common.search")}/>
@@ -26,7 +26,7 @@ const Blog = () => {
             {
                 posts.length === 0 ?
                 <p className="text-center mt-20">{t("blog.notFound")}</p> :
-                <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-20">
+                <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-20 px-5 md:px-0">
                     {
                     posts.map( ({slug, image, title, date, readingTime}) => <Card key={slug} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`}/>)
                     }

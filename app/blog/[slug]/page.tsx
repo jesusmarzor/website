@@ -18,13 +18,13 @@ const Post: React.FunctionComponent<props> = ({params})  => {
     return (
         <>
         <title>Blog - Jesusmarzor</title>
-        <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-10 w-full">
+        <section className="max-w-7xl mx-auto overflow-hidden pt-32 pb-10 px-5 md:px-10 w-full">
             <BackButton/>
             {
                 post &&
                 <>
-                <h2 className="font-bold text-5xl text-center py-5">{post?.title}</h2>
-                <div className="prose dark:prose-invert mx-auto">
+                <h2 className="font-bold text-5xl text-center mt-10 py-5">{post?.title}</h2>
+                <div className="prose max-w-3xl dark:prose-invert mx-auto">
                     <div dangerouslySetInnerHTML={{ __html: md().render(post?.markdown ?? "") }} />
                 </div>
                 </>
