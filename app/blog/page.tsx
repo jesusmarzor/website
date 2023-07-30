@@ -5,8 +5,10 @@ import { PostsConsumer } from "contexts/PostsContext"
 import useSearch from "hooks/useSearch"
 import { useTranslation } from "react-i18next"
 import { Search } from "components/ui/Search"
+import useWindowTop from "hooks/useWindowTop"
 
 const Blog = () => {
+    useWindowTop()
     const { t } = useTranslation()
     const allPosts = PostsConsumer()
     const {posts, didTapSearch, setText} = useSearch({allData: allPosts})

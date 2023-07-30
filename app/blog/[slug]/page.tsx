@@ -2,6 +2,7 @@
 import { PostsConsumer } from "contexts/PostsContext"
 import { BackButton } from "components/ui/BackButton"
 import md from "markdown-it"
+import useWindowTop from "hooks/useWindowTop"
 
 interface Params {
     slug: string
@@ -12,6 +13,7 @@ interface props {
 }
 
 const Post: React.FunctionComponent<props> = ({params})  => {
+    useWindowTop()
     const post = PostsConsumer().filter( ({slug}) => slug === params.slug)[0]
     return (
         <>
