@@ -12,7 +12,8 @@
         "send": "Send",
         "blog": "Blog",
         "new": "New",
-        "seeAll": "See all"
+        "seeAll": "See all",
+        "search": "Search"
     },
     "language": {
         "spanish": {
@@ -33,7 +34,8 @@
         "p3": "I leave direct links to my projects and my resume."
     },
     "blog": {
-        "minutesOfReading": "@ minutes of reading"
+        "minutesOfReading": "@ minutes of reading",
+        "notFound": "Article not found"
     },
     "error": {
         "name": "Introduce your name.",

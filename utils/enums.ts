@@ -10,7 +10,3 @@ export enum Theme {
     light = "light",
     dark = "dark"
 }
-
-export enum CardType {
-    project, post
-} 

@@ -16,7 +16,7 @@ const Post: React.FunctionComponent<props> = ({params})  => {
     return (
         <>
         <title>Blog - Jesusmarzor</title>
-        <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-10">
+        <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-10 w-full">
             <BackButton/>
             {
                 post &&

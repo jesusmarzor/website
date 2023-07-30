@@ -18,7 +18,7 @@ const Content: React.FC<props> = ({children}) => {
     }
 
     return (
-        <main onClick={didTapMain}>
+        <main onClick={didTapMain} className="min-h-screen flex flex-col justify-between">
             <Header/>
             {children}
             <Footer/>
