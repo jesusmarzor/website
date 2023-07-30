@@ -28,7 +28,7 @@ const Blog = () => {
                 <p className="text-center mt-20">{t("blog.notFound")}</p> :
                 <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-20 px-5 md:px-0">
                     {
-                    posts.map( ({slug, image, title, date, readingTime}) => <Card key={slug} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`}/>)
+                    posts.map( ({id, slug, image, title, date, readingTime}) => <Card key={id + title} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`}/>)
                     }
                 </ul>
             }

@@ -30,6 +30,7 @@ export interface SocialNetwork {
 }
 
 export interface Post {
+    id: number
     slug: string
     title: string
     date: string
