@@ -11,7 +11,7 @@ const Blog = () => {
     useWindowTop()
     const { t } = useTranslation()
     const allPosts = PostsConsumer()
-    const {posts, didTapSearch, setText} = useSearch({allData: allPosts})
+    const {posts, didTapSearch, text, setText} = useSearch({allData: allPosts})
     
     return (
         <>
@@ -20,7 +20,7 @@ const Blog = () => {
         <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>
-                <Search onSubmit={didTapSearch} setText={setText} placeholder={t("common.search")}/>
+                <Search onSubmit={didTapSearch} value={text} setText={setText} placeholder={t("common.search")}/>
             </header>
             <h2 className="text-5xl font-bold text-center mt-10">{t("common.blog")}</h2>
             {
