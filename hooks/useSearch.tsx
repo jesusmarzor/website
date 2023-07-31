@@ -21,7 +21,9 @@ const useSearch = ({allData}: props) => {
 
     const didTapSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setPosts(text.length === 0 ? allData : allData.filter( ({title}) => title.toLowerCase().includes(text.toLocaleLowerCase())))
+        setPosts(text.length === 0 ? allData : allData.filter( ({title, tags}) => {
+            return title.toLowerCase().includes(text.toLowerCase()) || tags.filter( tag => tag.toLowerCase().includes(text.toLowerCase())).length !== 0
+        }))
     }
 
     return {posts, didTapSearch, text, setText}
