@@ -11,6 +11,7 @@ export const BlogSection: React.FC = () => {
     const { t } = useTranslation()
     const posts = PostsConsumer().slice(0, maxNumCardsInHomeSections)
     return(
+        posts.length !== 0 &&
         <Section name="blog" title={t("common.blog")} titleClasses="text-center" sectionClasses="flex flex-col justify-center items-center gap-10">
             <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-10">
                 {
