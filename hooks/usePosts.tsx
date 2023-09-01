@@ -4,17 +4,19 @@ import { LoaderType, Post } from "utils/interfaces";
 import { LoaderPageConsumer } from "contexts/LoaderPageContext";
 import useDate from "./useDate";
 import { useTranslation } from "react-i18next";
+import { languages } from "utils/constants";
 
 const usePosts = () => {
     const [posts, setPosts] = useState<Post[]>([])
     const {isLoadingTypeShowed, hideLoader} = LoaderPageConsumer()
     const {isShowedPost} = useDate()
     const { i18n } = useTranslation()
+    const languagesCode = languages.map( lng => lng.code)
     useEffect(() => {
         supabase
         .from('Posts')
         .select()
-        .eq("lang", i18n.language)
+        .eq("lang", localStorage.getItem("lang") ?? languagesCode[0])
         .order("date", {ascending: false})
         .then( res => {
             let posts = res.data?.filter( ({date}) => isShowedPost(date)) as Post[]
