@@ -9,7 +9,11 @@
         "name": "Name",
         "email": "Mail",
         "message": "Message",
-        "send": "Send"
+        "send": "Send",
+        "blog": "Blog",
+        "new": "New",
+        "seeAll": "See all",
+        "search": "Search"
     },
     "language": {
         "spanish": {
@@ -28,6 +32,10 @@
         "p1": "I am Jesús Martín Zorrilla, a computer engineer. I consider myself a responsible, organized, and committed person in everything I do.",
         "p2": "I have worked as React developer and now I am working as iOS developer. Thanks to my curiosity and professional experience, I feel that I can achieve everything I set my mind to.",
         "p3": "I leave direct links to my projects and my resume."
+    },
+    "blog": {
+        "minutesOfReading": "@ minutes of reading",
+        "notFound": "Article not found"
     },
     "error": {
         "name": "Introduce your name.",

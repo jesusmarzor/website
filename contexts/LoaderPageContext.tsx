@@ -1,6 +1,7 @@
 "use client"
-import { createContext, useContext } from "react";
+import {createContext, useContext } from "react";
 import useLoaderPage from "hooks/useLoaderPage";
+import { LoaderPageReturn } from "utils/interfaces";
 
 interface props {
     children: JSX.Element
@@ -14,6 +15,6 @@ export const LoaderPageProvider: React.FC<props> = ({children}) => {
 }
 
 export const LoaderPageConsumer = () => {
-    const context: any = useContext(loaderPageContext)
+    const context: LoaderPageReturn = useContext(loaderPageContext)
     return context
 }

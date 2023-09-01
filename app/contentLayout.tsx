@@ -1,4 +1,5 @@
 "use client"
+import { Footer } from "components/Footer"
 import { Header } from "components/Header"
 import { LanguageModalConsumer } from "contexts/LanguageModalContext"
 import { MenuMobileConsumer } from "contexts/MenuMobileContext"
@@ -17,9 +18,10 @@ const Content: React.FC<props> = ({children}) => {
     }
 
     return (
-        <main onClick={didTapMain}>
+        <main onClick={didTapMain} className="min-h-screen flex flex-col justify-between">
             <Header/>
             {children}
+            <Footer/>
         </main>
     )
 }

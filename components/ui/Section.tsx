@@ -11,7 +11,7 @@ interface props {
 
 const Section: React.FC<props> = ({name, title, sectionClasses, titleClasses, children}) => {
     return(
-        <Element name={name} className={`max-w-7xl mx-auto overflow-hidden pt-28 px-10 ${sectionClasses}`}>
+        <Element name={name} className={`max-w-7xl mx-auto overflow-hidden pt-28 px-10 w-full ${sectionClasses}`}>
             <h2 className={`font-bold text-5xl ${titleClasses}`}>{title}</h2>
             {children}
         </Element>
