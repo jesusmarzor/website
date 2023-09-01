@@ -1,6 +1,6 @@
 import { AboutMe } from "components/AboutMe";
+import { BlogSection } from "components/BlogSection";
 import { Contact } from "components/Contact";
-import { Footer } from "components/Footer";
 import { Introduce } from "components/Introduce";
 import { Projects } from "components/Projects";
 
@@ -12,8 +12,8 @@ export default function Home() {
     <Introduce/>
     <AboutMe/>
     <Projects/>
+    <BlogSection/>
     <Contact/>
-    <Footer/>
     </>
   )
 }

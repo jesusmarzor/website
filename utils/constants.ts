@@ -35,6 +35,10 @@ export const menuList: Menu[] = [
         to: "projects"
     },
     {
+        titleKey: "common.blog",
+        to: "blog"
+    },
+    {
         titleKey: "common.contact",
         to: "contact"
     }
@@ -60,3 +64,7 @@ export const socialNetworks: SocialNetwork[] = [
 ]
 
 export const themeDefault = Theme.dark
+
+export const minDaysNewLabel: number = 3
+
+export const maxNumCardsInHomeSections: number = 3

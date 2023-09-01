@@ -8,6 +8,7 @@ import { MenuMobileProvider } from 'contexts/MenuMobileContext'
 import { ProjectsProvider } from 'contexts/ProjectsContext'
 import { Loader } from 'components/LoaderPage'
 import { LoaderPageProvider } from 'contexts/LoaderPageContext'
+import { PostsProvider } from 'contexts/PostsContext'
 const inter = Open_Sans({ subsets: ['latin'] })
 
 export default function RootLayout({
@@ -24,11 +25,13 @@ export default function RootLayout({
           <Loader/>
           <LanguageModalProvider>
             <MenuMobileProvider>
-              <ProjectsProvider>
-                <ContentLayout>
-                  {children}
-                </ContentLayout>
-              </ProjectsProvider>
+              <PostsProvider>
+                <ProjectsProvider>
+                  <ContentLayout>
+                    {children}
+                  </ContentLayout>
+                </ProjectsProvider>
+              </PostsProvider>
             </MenuMobileProvider>
           </LanguageModalProvider>
           </>
