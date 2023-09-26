@@ -16,6 +16,7 @@ const useProjects = () => {
         .from('Projects')
         .select()
         .eq("lang", localStorage.getItem("lang") ?? languagesCode[0])
+        .order('featured', {nullsFirst: false})
         .order("created_at", {ascending: false})
         .then( res => {
             setProjects(res.data ?? [])

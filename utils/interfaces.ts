@@ -18,6 +18,7 @@ export interface Project {
     url: string
     image: string
     tags: string[]
+    featured: boolean
 }
 
 export interface FormErrors {
