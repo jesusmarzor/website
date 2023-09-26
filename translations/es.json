@@ -35,6 +35,9 @@
         "minutesOfReading": "@ minutos de lectura",
         "notFound": "Artículo no encontrado"
     },
+    "projects": {
+        "notFound": "Proyecto no encontrado"
+    },
     "error": {
         "name": "Introduce tu nombre.",
         "email": "Introduce un correo correcto.",

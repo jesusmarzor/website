@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import supabase from "utils/supabase"
-import { LoaderType, Post } from "utils/interfaces";
+import { Post } from "utils/interfaces";
 import { LoaderPageConsumer } from "contexts/LoaderPageContext";
 import useDate from "./useDate";
 import { useTranslation } from "react-i18next";
 import { languages } from "utils/constants";
+import { LoaderType } from "utils/enums";
 
 const usePosts = () => {
     const [posts, setPosts] = useState<Post[]>([])

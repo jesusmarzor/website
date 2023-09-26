@@ -1,6 +1,7 @@
 import { LoaderPageConsumer } from "contexts/LoaderPageContext"
 import { useEffect, useState } from "react"
-import { LoaderType, Project } from "utils/interfaces"
+import { Project } from "utils/interfaces"
+import { LoaderType } from "utils/enums"
 import supabase from "utils/supabase"
 import { useTranslation } from "react-i18next";
 import { languages } from "utils/constants";
