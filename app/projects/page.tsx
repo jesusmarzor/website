@@ -29,7 +29,7 @@ const Projects = () => {
                 <p className="text-center mt-20">{t("projects.notFound")}</p> :
                 <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-20 px-5 md:px-0">
                     {
-                    (list as Project[]).map( ({id, image, title, description, url}) => <Card key={id + title} image={image} title={title} description={description} to={url} />)
+                    (list as Project[]).map( ({id, image, title, tags, description, url, color}) => <Card key={id + title} id={id} image={image} title={title} description={description} to={url} tags={tags} color={color}/>)
                     }
                 </ul>
             }

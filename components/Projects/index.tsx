@@ -15,7 +15,7 @@ export const Projects: React.FC = () => {
         <Section name="projects" title={t("common.projects")} titleClasses="text-center" sectionClasses="flex flex-col justify-center items-center gap-10">
             <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-10">
                 {
-                    projects?.map( ({id, image, title, description, url}) => <Card key={id + title} image={image} title={title} description={description} to={url} />)
+                    projects?.map( ({id, image, title, description, tags, url, color}) => <Card key={id + title} id={id} image={image} title={title} description={description} to={url} tags={tags} color={color}/>)
                 }
             </ul>
             <Button classes="" type={ButtonType.navigation} to="/projects">{t("common.seeAll")}</Button>

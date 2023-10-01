@@ -19,6 +19,7 @@ export interface Project {
     image: string
     tags: string[]
     featured: boolean
+    color: string
 }
 
 export interface FormErrors {
