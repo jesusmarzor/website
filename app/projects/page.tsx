@@ -1,35 +1,35 @@
 "use client"
 import { BackButton } from "components/ui/BackButton"
 import Card from "components/ui/Card"
-import { PostsConsumer } from "contexts/PostsContext"
+import { ProjectsConsumer } from "contexts/ProjectsContext"
 import useSearch from "hooks/useSearch"
 import { useTranslation } from "react-i18next"
 import { Search } from "components/ui/Search"
 import useWindowTop from "hooks/useWindowTop"
-import { Post } from "utils/interfaces"
+import { Project } from "utils/interfaces"
 
-const Blog = () => {
+const Projects = () => {
     useWindowTop()
     const { t } = useTranslation()
-    const allPosts = PostsConsumer()
-    const {list, didTapSearch, text, setText} = useSearch({allData: allPosts})
+    const allProjects = ProjectsConsumer()
+    const {list, didTapSearch, text, setText} = useSearch({allData: allProjects})
     
     return (
         <>
-        <title>Blog - Jesusmarzor</title>
+        <title>Projects - Jesusmarzor</title>
         <meta name="description" content=""/>
         <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>
                 <Search onSubmit={didTapSearch} value={text} setText={setText} placeholder={t("common.search")}/>
             </header>
-            <h2 className="text-5xl font-bold text-center mt-10">{t("common.blog")}</h2>
+            <h2 className="text-5xl font-bold text-center mt-10">{t("common.projects")}</h2>
             {
                 list.length === 0 ?
-                <p className="text-center mt-20">{t("blog.notFound")}</p> :
+                <p className="text-center mt-20">{t("projects.notFound")}</p> :
                 <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-20 px-5 md:px-0">
                     {
-                    (list as Post[]).map( ({id, slug, image, title, date, readingTime}) => <Card key={id + title} id={id} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`}/>)
+                    (list as Project[]).map( ({id, image, title, tags, description, url, color}) => <Card key={id + title} id={id} image={image} title={title} description={description} to={url} tags={tags} color={color}/>)
                     }
                 </ul>
             }
@@ -38,4 +38,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default Projects

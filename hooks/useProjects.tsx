@@ -1,6 +1,7 @@
 import { LoaderPageConsumer } from "contexts/LoaderPageContext"
 import { useEffect, useState } from "react"
-import { LoaderType, Project } from "utils/interfaces"
+import { Project } from "utils/interfaces"
+import { LoaderType } from "utils/enums"
 import supabase from "utils/supabase"
 import { useTranslation } from "react-i18next";
 import { languages } from "utils/constants";
@@ -15,6 +16,7 @@ const useProjects = () => {
         .from('Projects')
         .select()
         .eq("lang", localStorage.getItem("lang") ?? languagesCode[0])
+        .order('featured', {nullsFirst: false})
         .order("created_at", {ascending: false})
         .then( res => {
             setProjects(res.data ?? [])
