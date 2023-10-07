@@ -34,6 +34,8 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/markdown-it": "^12.2.3",
     "@types/react-scroll": "^1.8.7",
-    "encoding": "^0.1.13"
+    "@types/scrollreveal": "^0.0.9",
+    "encoding": "^0.1.13",
+    "scrollreveal": "^4.0.9"
   }
 }
