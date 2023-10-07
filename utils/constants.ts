@@ -50,14 +50,17 @@ export const projectsUrl = "https://github.com/jesusmarzor"
 
 export const socialNetworks: SocialNetwork[] = [
     {
+        name: "Linkedin",
         icon: Linkedin,
         url: "https://linkedin.com/in/jesusmarzor"
     },
     {
+        name: "Github",
         icon: Github,
         url: projectsUrl
     },
     {
+        name: "Instagram",
         icon: Instagram,
         url: "https://instagram.com/jesusmarzor"
     }

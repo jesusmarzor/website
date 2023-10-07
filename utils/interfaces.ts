@@ -29,6 +29,7 @@ export interface FormErrors {
 }
 
 export interface SocialNetwork {
+    name: string,
     icon: LucideIcon,
     url: string
 }

@@ -6,7 +6,7 @@ export const ThemeIcon: React.FC = () => {
     const {theme, didTapThemeIcon} = useThemeIcon()
     
     return(
-        <button onClick={didTapThemeIcon}>
+        <button onClick={didTapThemeIcon} title={theme}>
             {
                 theme === Theme.dark ?
                 <Sun/> :

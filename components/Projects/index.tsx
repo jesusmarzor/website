@@ -22,7 +22,7 @@ export const Projects: React.FC = () => {
                     }
                 </ul>
             </ScrollReveal>
-            <Button classes="" type={ButtonType.navigation} to="/projects">{t("common.seeAll")}</Button>
+            <Button type={ButtonType.navigation} to="/projects">{t("common.seeAll")}</Button>
         </Section>
     )
 }
