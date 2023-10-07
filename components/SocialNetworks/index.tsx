@@ -11,7 +11,7 @@ export const SocialNetworks: React.FC<props> = ({classes}) => {
                 socialNetworks.map( sn => {
                     return (
                         <li key={sn.url} className="hover:scale-125 transition-transform duration-300">
-                            <a href={sn.url} target="_blank" rel="noreferrer">
+                            <a href={sn.url} target="_blank" rel="noreferrer" aria-label={sn.name}>
                                 <sn.icon size={28}/>
                             </a>
                         </li>

@@ -19,7 +19,7 @@ const Blog = () => {
     return (
         <>
         <title>Blog - Jesusmarzor</title>
-        <meta name="description" content=""/>
+        <meta name="description" content="Articles created by Jesús Martín Zorrilla (jesusmarzor), web and iOS developer."/>
         <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>

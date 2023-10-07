@@ -17,7 +17,8 @@ const Post: React.FunctionComponent<props> = ({params})  => {
     const post = PostsConsumer().filter( ({slug}) => slug === params.slug)[0]
     return (
         <>
-        <title>Blog - Jesusmarzor</title>
+        <title>{`${post?.title ?? "Blog"} - Jesusmarzor`}</title>
+        <meta name="description" content={`Article about: ${post?.title ?? "programming"}, written by Jesús Martín Zorrilla (jesusmarzor), web and iOS developer.`}/>
         <section className="max-w-7xl mx-auto overflow-hidden pt-32 pb-10 px-5 md:px-10 w-full">
             <BackButton/>
             {

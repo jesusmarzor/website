@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
     <title>Portfolio - Jesusmarzor</title>
-    <meta name="description" content=""/>
+    <meta name="description" content="Jesús Martín Zorrilla (jesusmarzor)'s website, web and iOS developer. Here you will find his latest projects and articles developed with Swift or React."/>
     <Introduce/>
     <AboutMe/>
     <Projects/>

@@ -21,7 +21,7 @@ export const BlogSection: React.FC = () => {
                     }
                 </ul>
             </ScrollReveal>
-            <Button classes="" type={ButtonType.navigation} to="/blog">{t("common.seeAll")}</Button>
+            <Button type={ButtonType.navigation} to="/blog">{t("common.seeAll")}</Button>
         </Section>
     )
 }
