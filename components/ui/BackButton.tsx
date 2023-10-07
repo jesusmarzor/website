@@ -11,7 +11,7 @@ export const BackButton = () => {
         router.push(pathNameString)
     }
     return(
-        <button onClick={ goToBack }>
+        <button onClick={ goToBack } title="Back">
             <ChevronLeft size={30}/>
         </button>
     )

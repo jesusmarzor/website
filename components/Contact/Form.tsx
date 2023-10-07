@@ -24,7 +24,7 @@ export const Form: React.FC<props> = ({name, setName, email, setEmail, message, 
             <Input title={t("common.name")} name="name" text={name} setText={setName}  error={errors.name}/>
             <Input title={t("common.email")} name="email" text={email} setText={setEmail} error={errors.email}/>
             <Input type={InputType.textarea} name="message" text={message} setText={setMessage} title={t("common.message")} error={errors.message}/>
-            <Button type={ButtonType.input} classes={loading ? "pointer-events-none" : "pointer-events-auto"}>
+            <Button type={ButtonType.input} classes={loading ? "pointer-events-none" : "pointer-events-auto"} title={t("common.send")}>
                 {
                     loading ?
                     <Spinner classes="mx-auto fill-blue-400 !w-6 !h-6"/> :

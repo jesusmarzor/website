@@ -1,4 +1,5 @@
 import { LucideIcon } from "lucide-react"
+import { LoaderType } from "./enums"
 
 export interface Language {
     nameKey: string
@@ -16,6 +17,9 @@ export interface Project {
     description: string
     url: string
     image: string
+    tags: string[]
+    featured: boolean
+    color: string
 }
 
 export interface FormErrors {
@@ -25,6 +29,7 @@ export interface FormErrors {
 }
 
 export interface SocialNetwork {
+    name: string,
     icon: LucideIcon,
     url: string
 }
@@ -44,10 +49,6 @@ export interface Post {
 export interface Loader {
     type: LoaderType
     isShowed: boolean
-}
-
-export enum LoaderType {
-    projects, posts
 }
 
 export interface LoaderPageReturn {

@@ -1,5 +1,6 @@
-import { useCallback, useState } from "react"
-import { Loader, LoaderPageReturn, LoaderType } from "utils/interfaces"
+import { useState } from "react"
+import { Loader, LoaderPageReturn } from "utils/interfaces"
+import { LoaderType } from "utils/enums"
 
 export const useLoaderPage = (): LoaderPageReturn => {
     const [loaders, setLoaders] = useState<Loader[]>([

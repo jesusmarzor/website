@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Post } from "utils/interfaces"
+import { Post, Project } from "utils/interfaces"
 
 interface props {
-    allData: Post[]
+    allData: Post[] | Project[]
 }
 
 const useSearch = ({allData}: props) => {
-    const [posts, setPosts] = useState<Post[]>(allData)
+    const [list, setList] = useState<Post[] | Project[]>(allData)
     const [text, setText] = useState<string>("")
     const { i18n } = useTranslation()
 
     useEffect( () => {
-        setPosts(allData)
+        setList(allData)
     }, [allData])
 
     useEffect( () => {
@@ -21,12 +21,12 @@ const useSearch = ({allData}: props) => {
 
     const didTapSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        setPosts(text.length === 0 ? allData : allData.filter( ({title, tags}) => {
+        setList(text.length === 0 ? allData : (allData as any[]).filter( ({title, tags}: Post | Project) => {
             return title.toLowerCase().includes(text.toLowerCase()) || tags.filter( tag => tag.toLowerCase().includes(text.toLowerCase())).length !== 0
         }))
     }
 
-    return {posts, didTapSearch, text, setText}
+    return {list, didTapSearch, text, setText}
 }
 
 export default useSearch
