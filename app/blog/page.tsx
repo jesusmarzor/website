@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import { Search } from "components/ui/Search"
 import { Post } from "utils/interfaces"
 import ScrollReveal from "components/ScrollReveal"
-import { srPageList } from "utils/constants"
+import { authorName, srPageList, textLogo } from "utils/constants"
 import useWindowTop from "hooks/useWindowTop"
 
 const Blog = () => {
@@ -18,8 +18,8 @@ const Blog = () => {
     
     return (
         <>
-        <title>Blog - Jesusmarzor</title>
-        <meta name="description" content="Articles created by Jesús Martín Zorrilla (jesusmarzor), web and iOS developer."/>
+        <title>{`Blog - ${textLogo.name}${textLogo.lastName}`}</title>
+        <meta name="description" content={`Articles created by ${authorName} (${textLogo.name}${textLogo.lastName}), web and iOS developer.`}/>
         <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>
