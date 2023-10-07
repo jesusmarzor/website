@@ -68,3 +68,30 @@ export const themeDefault = Theme.dark
 export const minDaysNewLabel: number = 3
 
 export const maxNumCardsInHomeSections: number = 3
+
+export const srProjectsHome: scrollReveal.ScrollRevealObjectOptions = {
+    origin: 'left',
+    duration: 1000,
+    delay: 2,
+    distance: '50px',
+    scale: 1,
+    easing: 'ease'
+}
+
+export const srPostsHome: scrollReveal.ScrollRevealObjectOptions = {
+    origin: 'right',
+    duration: 1000,
+    delay: 2,
+    distance: '50px',
+    scale: 1,
+    easing: 'ease'
+}
+
+export const srPageList: scrollReveal.ScrollRevealObjectOptions = {
+    origin: 'bottom',
+    duration: 1000,
+    delay: 3,
+    distance: '50px',
+    scale: 1,
+    easing: 'ease'
+}

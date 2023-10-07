@@ -5,8 +5,10 @@ import { ProjectsConsumer } from "contexts/ProjectsContext"
 import useSearch from "hooks/useSearch"
 import { useTranslation } from "react-i18next"
 import { Search } from "components/ui/Search"
-import useWindowTop from "hooks/useWindowTop"
 import { Project } from "utils/interfaces"
+import ScrollReveal from "components/ScrollReveal"
+import { srPageList } from "utils/constants"
+import useWindowTop from "hooks/useWindowTop"
 
 const Projects = () => {
     useWindowTop()
@@ -27,11 +29,13 @@ const Projects = () => {
             {
                 list.length === 0 ?
                 <p className="text-center mt-20">{t("projects.notFound")}</p> :
-                <ul className="grid grid-cols-autoFill gap-8 items-center w-full pt-20 px-5 md:px-0">
-                    {
-                    (list as Project[]).map( ({id, image, title, tags, description, url, color}) => <Card key={id + title} id={id} image={image} title={title} description={description} to={url} tags={tags} color={color}/>)
-                    }
-                </ul>
+                <ScrollReveal classes="w-full pt-20 px-5 md:px-0" scrollRevealOptions={srPageList}>
+                    <ul className="grid grid-cols-autoFill gap-8 items-center">
+                        {
+                        (list as Project[]).map( ({id, image, title, tags, description, url, color}) => <Card key={id + title} id={id} image={image} title={title} description={description} to={url} tags={tags} color={color}/>)
+                        }
+                    </ul>
+                </ScrollReveal>
             }
         </section>
         </>
