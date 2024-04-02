@@ -11,6 +11,8 @@ import { LoaderPageProvider } from 'contexts/LoaderPageContext'
 import { PostsProvider } from 'contexts/PostsContext'
 const inter = Open_Sans({ subsets: ['latin'] })
 
+export const runtime = 'edge';
+
 export default function RootLayout({
   children,
 }: {
