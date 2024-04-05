@@ -1,9 +1,11 @@
 "use client"
 import { PostsConsumer } from "contexts/PostsContext"
 import { BackButton } from "components/ui/BackButton"
-import md from "markdown-it"
 import useWindowTop from "hooks/useWindowTop"
 import { authorName, textLogo } from "utils/constants"
+import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter"
+import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
+import ReactMarkdown from "react-markdown"
 
 interface Params {
     slug: string
@@ -27,7 +29,29 @@ const Post: React.FunctionComponent<props> = ({params})  => {
                 <>
                 <h2 className="font-bold text-5xl text-center mt-10 py-5">{post?.title}</h2>
                 <div className="prose max-w-3xl dark:prose-invert mx-auto">
-                    <div dangerouslySetInnerHTML={{ __html: md().render(post?.markdown ?? "") }} />
+                <ReactMarkdown
+                    components={{
+                        code({ className, ...props }) {
+                        const hasLang = /language-(\w+)/.exec(className || "");
+                        return hasLang ? (
+                            <SyntaxHighlighter
+                            style={oneDark}
+                            language={hasLang[1]}
+                            PreTag="div"
+                            className="mockup-code scrollbar-thin scrollbar-track-base-content/5 scrollbar-thumb-base-content/40 scrollbar-track-rounded-md scrollbar-thumb-rounded"
+                            showLineNumbers={true}
+                            useInlineStyles={true}
+                            >
+                            {String(props.children).replace(/\n$/, "")}
+                            </SyntaxHighlighter>
+                        ) : (
+                            <code className={className} {...props} />
+                        );
+                        },
+                    }}
+                    >
+                    {post.markdown}
+                    </ReactMarkdown>
                 </div>
                 </>
             }

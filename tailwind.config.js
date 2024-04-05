@@ -37,6 +37,14 @@ module.exports = {
           default: "#a4d338"
         }
       },
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-pre-bg': "#1f2937",
+            '--tw-prose-invert-pre-bg': "#282c34"
+          },
+        },
+      }),
       transitionProperty: {
         backgroundSize: "background-size",
         transform: "transform"
