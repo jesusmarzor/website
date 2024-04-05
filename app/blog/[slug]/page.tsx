@@ -3,7 +3,7 @@ import { PostsConsumer } from "contexts/PostsContext"
 import { BackButton } from "components/ui/BackButton"
 import useWindowTop from "hooks/useWindowTop"
 import { authorName, textLogo } from "utils/constants"
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
 import ReactMarkdown from "react-markdown"
 
