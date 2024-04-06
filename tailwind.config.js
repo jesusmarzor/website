@@ -6,7 +6,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -37,6 +36,14 @@ module.exports = {
           default: "#a4d338"
         }
       },
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-pre-bg': "#282c34",
+            '--tw-prose-invert-pre-bg': "#282c34"
+          },
+        },
+      }),
       transitionProperty: {
         backgroundSize: "background-size",
         transform: "transform"
@@ -67,6 +74,9 @@ module.exports = {
       },
       borderWidth: {
         "0.5": "0.01rem"
+      },
+      fontSize: {
+        "2xs": "0.5rem"
       }
     }
   },

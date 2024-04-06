@@ -2,7 +2,14 @@
 const nextConfig = {
     images: {
         domains: [process.env.NEXT_PUBLIC_SUPABASE_URL],
-    }
+    },
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+        config.externals.push({
+            'utf-8-validate': 'commonjs utf-8-validate',
+            'bufferutil': 'commonjs bufferutil',
+        })
+        return config
+    },
 }
 
 module.exports = nextConfig
