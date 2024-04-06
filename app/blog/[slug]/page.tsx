@@ -6,9 +6,6 @@ import { authorName, textLogo } from "utils/constants"
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
 import ReactMarkdown from "react-markdown"
-import { CopyToClipboard } from "react-copy-to-clipboard"
-import { Check, File } from "lucide-react"
-import { useState } from "react"
 import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
 import typescript from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
 import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
@@ -17,6 +14,7 @@ import json from "react-syntax-highlighter/dist/cjs/languages/prism/json";
 import swift from "react-syntax-highlighter/dist/cjs/languages/prism/swift";
 import dart from "react-syntax-highlighter/dist/cjs/languages/prism/dart";
 import kotlin from "react-syntax-highlighter/dist/cjs/languages/prism/kotlin";
+import CopyCode from "components/ui/MarkdownCode/CopyCode"
 
 SyntaxHighlighter.registerLanguage("tsx", tsx);
 SyntaxHighlighter.registerLanguage("typescript", typescript);
@@ -70,7 +68,6 @@ const Post: React.FunctionComponent<props> = ({params})  => {
                     },
                     pre: (pre) => {
                         const codeChunk = (pre as any).node.children[0].children[0].value as string;
-                        const [isCopy, setIsCopy] = useState<Boolean>(false);
                         const language = 
                         (pre as any).children.props.className.replace(
                           /language-/g,
@@ -79,27 +76,7 @@ const Post: React.FunctionComponent<props> = ({params})  => {
                       
                         return (
                           <div className="relative overflow-x-hidden">
-                            {
-                              isCopy
-                              ? <Check
-                              className="absolute right-3 top-10 w-5 h-5 text-white-default/40"
-                              />
-                              :
-                              <button
-                                className="absolute right-3 top-10"
-                              >
-                                <CopyToClipboard
-                                  text={codeChunk}
-                                  onCopy={ async () => {
-                                    setIsCopy(true);
-                                    await new Promise((resolve) => setTimeout(resolve, 1000));
-                                    setIsCopy(false);
-                                  }}
-                                >
-                                  <File className="h-5 w-5 cursor-pointer text-white-default/40 hover:text-orange-default" />
-                                </CopyToClipboard>
-                              </button>
-                            }
+                            <CopyCode textCopied={codeChunk}/>
                             <span
                               className="absolute right-3 bottom-10 rounded-xl text-xs tracking-wider uppercase text-black-default bg-white-default/50 backdrop-blur-sm px-2 py-1"
                             >
