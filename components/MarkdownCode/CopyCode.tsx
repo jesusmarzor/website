@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Check, File } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import CopyToClipboard from "react-copy-to-clipboard";
 
 interface props {
@@ -24,7 +24,7 @@ const CopyCode: React.FC<props> = ({textCopied}) => {
             setIsCopy(false);
         }}
         >
-        <File className="h-5 w-5 cursor-pointer text-white-default/40 hover:text-orange-default" />
+        <Copy className="h-5 w-5 cursor-pointer text-white-default/40 hover:text-orange-default" />
         </CopyToClipboard>
     </button>
 }
