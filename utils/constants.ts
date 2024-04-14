@@ -71,3 +71,5 @@ export const themeDefault = Theme.dark
 export const minDaysNewLabel: number = 3
 
 export const maxNumCardsInHomeSections: number = 3
+
+export const domain = "jesusmarzor.pro"

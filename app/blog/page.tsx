@@ -6,7 +6,7 @@ import useSearch from "hooks/useSearch"
 import { useTranslation } from "react-i18next"
 import { Search } from "components/ui/Search"
 import { Post } from "utils/interfaces"
-import { authorName, textLogo } from "utils/constants"
+import { authorName, domain, textLogo } from "utils/constants"
 import useWindowTop from "hooks/useWindowTop"
 
 const Blog = () => {
@@ -14,11 +14,19 @@ const Blog = () => {
     const { t } = useTranslation()
     const allPosts = PostsConsumer()
     const {list, didTapSearch, text, setText} = useSearch({allData: allPosts})
-    
     return (
         <>
         <title>{`Blog - ${textLogo.name}${textLogo.lastName}`}</title>
-        <meta name="description" content={`Articles created by ${authorName} (${textLogo.name}${textLogo.lastName}), web and iOS developer.`}/>
+        <meta name="description" content={`Articles created by ${authorName} (${textLogo.name}${textLogo.lastName}), mobile and web developer.`}/>
+        <meta property="og:url" content={domain}/>
+        <meta property="og:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}blog.jpg`}/>
+        <meta property="og:title" content={`Blog - ${textLogo.name}${textLogo.lastName}`}/>
+        <meta property="og:description" content="Here you will find his latest articles developed."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content={domain}/>
+        <meta name="twitter:title" content={`Blog - ${textLogo.name}${textLogo.lastName}`}/>
+        <meta property="twitter:description" content="Here you will find his latest articles developed."/>
+        <meta name="twitter:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}blog.jpg`}/>
         <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>
