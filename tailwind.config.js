@@ -67,10 +67,52 @@ module.exports = {
         messageBottom: {
           '0%': { bottom: "-10rem" },
           '100%': { bottom: "1.25rem" },
+        },
+        fadeInUpCustom: {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(50%)"
+          },
+          "50%": {
+            opacity: 0.3
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0%)"
+          }
+        },
+        fadeRightCustom: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(50%)"
+          },
+          "50%": {
+            opacity: 0.3
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0%)"
+          }
+        },
+        fadeLeftCustom: {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-50%)"
+          },
+          "50%": {
+            opacity: 0.3
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0%)"
+          }
         }
       },
       animation: {
-        message: "messageBottom 300ms linear"
+        message: "messageBottom 300ms linear",
+        fadeUpCustom: "fadeInUpCustom 0.3s ease-in-out  var(--animate-delay) forwards",
+        fadeRightCustom: "fadeRightCustom 0.3s ease-in-out var(--animate-delay) forwards",
+        fadeLeftCustom: "fadeLeftCustom 0.3s ease-in-out var(--animate-delay) forwards"
       },
       borderWidth: {
         "0.5": "0.01rem"
