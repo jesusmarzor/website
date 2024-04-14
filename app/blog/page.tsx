@@ -19,9 +19,11 @@ const Blog = () => {
         <title>{`Blog - ${textLogo.name}${textLogo.lastName}`}</title>
         <meta name="description" content={`Articles created by ${authorName} (${textLogo.name}${textLogo.lastName}), mobile and web developer.`}/>
         <meta property="og:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}blog.jpg`}/>
+        <meta property="og:url" content=""/>
         <meta property="og:title" content={`Blog - ${textLogo.name}${textLogo.lastName}`}/>
         <meta property="og:description" content="Here you will find his latest articles developed."/>
         <meta name="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content=""/>
         <meta name="twitter:title" content={`Blog - ${textLogo.name}${textLogo.lastName}`}/>
         <meta property="twitter:description" content="Here you will find his latest articles developed."/>
         <meta name="twitter:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}blog.jpg`}/>
