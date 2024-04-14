@@ -4,7 +4,6 @@ import { BackButton } from "components/ui/BackButton"
 import useWindowTop from "hooks/useWindowTop"
 import { authorName, textLogo } from "utils/constants"
 import MarkdownCode from "components/MarkdownCode"
-import Head from "next/head"
 
 interface Params {
     slug: string
