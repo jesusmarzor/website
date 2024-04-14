@@ -15,7 +15,7 @@ export const BlogSection: React.FC = () => {
         <Section name="blog" title={t("common.blog")} titleClasses="text-center" sectionClasses="flex flex-col justify-center items-center gap-10">
             <ul className="w-full grid grid-cols-autoFill gap-8 items-center pt-10">
                 {
-                    posts.map( ({id, slug, image, title, date, readingTime}, index) => <Card key={id + title} id={id} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`} classes={`animate-fadeRightCustom opacity-0`} styles={{ '--animate-delay': `${index * 50}ms` } as any}/>)
+                    posts.map( ({id, slug, image, title, date, readingTime}, index) => <Card key={id + title} id={id} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`} classes="animate-fadeRightCustom opacity-0" styles={{ '--animate-delay': `${index * 50}ms` } as any}/>)
                 }
             </ul>
             <Button type={ButtonType.navigation} to="/blog">{t("common.seeAll")}</Button>

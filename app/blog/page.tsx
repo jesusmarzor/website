@@ -30,7 +30,7 @@ const Blog = () => {
                 <p className="text-center mt-20">{t("blog.notFound")}</p> :
                 <ul className="w-full grid grid-cols-autoFill gap-8 items-center pt-20 px-5 md:px-0">
                     {
-                    (list as Post[]).map( ({id, slug, image, title, date, readingTime}, index) => <Card key={id + title} id={id} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`} classes={`animate-fadeUpCustom opacity-0`} styles={{ '--animate-delay': `${index * 50}ms` } as any}/>)
+                    (list as Post[]).map( ({id, slug, image, title, date, readingTime}, index) => <Card key={id + title} id={id} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`} classes="animate-fadeUpCustom opacity-0" styles={{ '--animate-delay': `${index * 50}ms` } as any}/>)
                     }
                 </ul>
             }
