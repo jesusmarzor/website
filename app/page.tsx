@@ -3,7 +3,7 @@ import { BlogSection } from "components/BlogSection";
 import { Contact } from "components/Contact";
 import { Introduce } from "components/Introduce";
 import { Projects } from "components/Projects";
-import { authorName, domain, textLogo } from "utils/constants";
+import { authorName, textLogo } from "utils/constants";
 
 export default function Home() {
   return (

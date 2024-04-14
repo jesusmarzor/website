@@ -6,7 +6,7 @@ import useSearch from "hooks/useSearch"
 import { useTranslation } from "react-i18next"
 import { Search } from "components/ui/Search"
 import { Post } from "utils/interfaces"
-import { authorName, domain, textLogo } from "utils/constants"
+import { authorName, textLogo } from "utils/constants"
 import useWindowTop from "hooks/useWindowTop"
 
 const Blog = () => {
