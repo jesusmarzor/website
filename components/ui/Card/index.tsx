@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { CSSProperties } from "react"
 import useDate from "hooks/useDate"
 import Image from "next/image"
 import { CardLink } from "components/ui/Card/CardLink"
@@ -14,13 +14,15 @@ interface props {
     to: string
     tags?: string[]
     color?: string
+    classes: string
+    styles: CSSProperties
 }
 
-const Card =  ({id, image, title, description, date, to, tags, color}: props) => {
+const Card =  ({id, image, title, description, date, to, tags, color, classes, styles}: props) => {
     const { t } = useTranslation()
     const { isShowedNew, getDateString } = useDate()
     return (
-        <li className="relative border border-black-default dark:border-white-default w-full h-full minProject:w-86 mx-auto rounded-xl">
+        <li className={`relative border border-black-default dark:border-white-default w-full h-full minProject:w-86 mx-auto rounded-xl animate-fade-up-custom ${classes}`} style={styles}>
             { typeof date === "string" && isShowedNew(date) &&
                 <p className="rounded-full px-4 py-2 absolute -right-2 -top-2 bg-orange-default animate-bounce z-10">{t("common.new")}</p>
             }

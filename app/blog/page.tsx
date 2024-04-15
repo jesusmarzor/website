@@ -6,8 +6,7 @@ import useSearch from "hooks/useSearch"
 import { useTranslation } from "react-i18next"
 import { Search } from "components/ui/Search"
 import { Post } from "utils/interfaces"
-import ScrollReveal from "components/ScrollReveal"
-import { authorName, srPageList, textLogo } from "utils/constants"
+import { authorName, textLogo } from "utils/constants"
 import useWindowTop from "hooks/useWindowTop"
 
 const Blog = () => {
@@ -15,11 +14,18 @@ const Blog = () => {
     const { t } = useTranslation()
     const allPosts = PostsConsumer()
     const {list, didTapSearch, text, setText} = useSearch({allData: allPosts})
-    
     return (
         <>
         <title>{`Blog - ${textLogo.name}${textLogo.lastName}`}</title>
         <meta name="description" content={`Articles created by ${authorName} (${textLogo.name}${textLogo.lastName}), web and iOS developer.`}/>
+        <meta property="og:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}blog.jpg`}/>
+        <meta property="og:url" content=""/>
+        <meta property="og:title" content={`Blog - ${textLogo.name}${textLogo.lastName}`}/>
+        <meta property="og:description" content="Here you will find his latest articles developed."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={`Blog - ${textLogo.name}${textLogo.lastName}`}/>
+        <meta property="twitter:description" content="Here you will find his latest articles developed."/>
+        <meta name="twitter:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}blog.jpg`}/>
         <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>
@@ -29,13 +35,11 @@ const Blog = () => {
             {
                 list.length === 0 ?
                 <p className="text-center mt-20">{t("blog.notFound")}</p> :
-                <ScrollReveal classes="w-full pt-20 px-5 md:px-0" scrollRevealOptions={srPageList}>
-                    <ul className="grid grid-cols-autoFill gap-8 items-center">
-                        {
-                        (list as Post[]).map( ({id, slug, image, title, date, readingTime}) => <Card key={id + title} id={id} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`}/>)
-                        }
-                    </ul>
-                </ScrollReveal>
+                <ul className="w-full grid grid-cols-autoFill gap-8 items-center pt-20 px-5 md:px-0">
+                    {
+                    (list as Post[]).map( ({id, slug, image, title, date, readingTime}, index) => <Card key={id + title} id={id} image={image} title={title} description={t("blog.minutesOfReading").replace("@", String(readingTime))} date={date} to={`/blog/${slug}`} classes="animate-fadeUpCustom opacity-0" styles={{ '--animate-delay': `${index * 50}ms` } as any}/>)
+                    }
+                </ul>
             }
         </section>
         </>

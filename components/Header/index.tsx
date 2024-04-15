@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
                 </h1>
                 {
                     pathname === '/' &&
-                    <MenuList classesName={`mr-auto fixed w-80 md:w-auto right-0 top-28 bottom-8 z-10 rounded-bl-xl rounded-tl-xl flex flex-col justify-center items-center gap-16 text-2xl md:text-base md:static md:flex-row md:gap-4 ${isShowedMenu ? "translate-x-0"  : "translate-x-80"} bg-white-default dark:bg-black-light border md:border-0 border-black-extra-light md:translate-x-0 transition-transform duration-500`}/>
+                    <MenuList classesName={`mr-auto fixed w-full md:w-auto right-0 top-20 bottom-0 z-10 flex flex-col justify-center items-center gap-16 text-2xl md:text-base md:static md:flex-row md:gap-4 ${isShowedMenu ? "translate-x-0"  : "translate-x-full"} bg-white-default/95 dark:bg-black-light/95 backdrop-blur-sm backdrop-opacity-70 md:translate-x-0 transition-transform duration-500`}/>
                 }
                 <ThemeIcon/>
                 <LanguageIcon/>
