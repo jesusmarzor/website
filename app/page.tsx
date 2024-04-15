@@ -15,7 +15,6 @@ export default function Home() {
     <meta property="og:title" content={`Website - ${textLogo.name}${textLogo.lastName}`}/>
     <meta property="og:description" content="Here you will find his latest projects and articles developed."/>
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta property="twitter:url" content=""/>
     <meta name="twitter:title" content={`Website - ${textLogo.name}${textLogo.lastName}`}/>
     <meta property="twitter:description" content="Here you will find his latest projects and articles developed."/>
     <meta name="twitter:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}home.jpg`}/>

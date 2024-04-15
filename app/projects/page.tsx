@@ -24,7 +24,6 @@ const Projects = () => {
         <meta property="og:title" content={`Projects - ${textLogo.name}${textLogo.lastName}`}/>
         <meta property="og:description" content="Here you will find his latest projects developed."/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content=""/>
         <meta name="twitter:title" content={`Projects - ${textLogo.name}${textLogo.lastName}`}/>
         <meta property="twitter:description" content="Here you will find his latest projects developed."/>
         <meta name="twitter:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}projects.jpg`}/>
