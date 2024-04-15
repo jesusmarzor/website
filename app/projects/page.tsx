@@ -19,6 +19,14 @@ const Projects = () => {
         <>
         <title>{`Projects - ${textLogo.name}${textLogo.lastName}`}</title>
         <meta name="description" content={`Projects created by ${authorName} (${textLogo.name}${textLogo.lastName}), web and iOS developer.`}/>
+        <meta property="og:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}projects.jpg`}/>
+        <meta property="og:url" content=""/>
+        <meta property="og:title" content={`Projects - ${textLogo.name}${textLogo.lastName}`}/>
+        <meta property="og:description" content="Here you will find his latest projects developed."/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={`Projects - ${textLogo.name}${textLogo.lastName}`}/>
+        <meta property="twitter:description" content="Here you will find his latest projects developed."/>
+        <meta name="twitter:image" content={`https://${process.env.NEXT_PUBLIC_SUPABASE_URL}${process.env.NEXT_PUBLIC_SUPABASE_OG_PATH}projects.jpg`}/>
         <section className="max-w-7xl mx-auto overflow-hidden pt-28 pb-10 px-5 md:px-10 w-full">
             <header className="flex justify-between items-center gap-2">
                 <BackButton/>
