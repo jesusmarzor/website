@@ -19,7 +19,6 @@ export async function generateMetadata ({ params, }: Props, ): Promise<Metadata>
   .eq("slug", slug)
   const post = (data as PostInterface[])[0]
   return {
-    description: `Article about: ${post?.title ?? "programming"}, written by ${authorName} (${textLogo.name}${textLogo.lastName}), web and iOS developer.`,
     openGraph: {
       title: post?.title ?? "",
       description: `written by ${authorName} (${textLogo.name}${textLogo.lastName})`,
