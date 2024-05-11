@@ -10,6 +10,7 @@ import { Loader } from 'components/LoaderPage'
 import { LoaderPageProvider } from 'contexts/LoaderPageContext'
 import { PostsProvider } from 'contexts/PostsContext'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 const inter = Open_Sans({ subsets: ['latin'] })
 
 export default function RootLayout({
@@ -25,6 +26,7 @@ export default function RootLayout({
           <>
           <Loader/>
           <SpeedInsights/>
+          <Analytics/>
           <LanguageModalProvider>
             <MenuMobileProvider>
               <PostsProvider>
