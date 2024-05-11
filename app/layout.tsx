@@ -9,6 +9,7 @@ import { ProjectsProvider } from 'contexts/ProjectsContext'
 import { Loader } from 'components/LoaderPage'
 import { LoaderPageProvider } from 'contexts/LoaderPageContext'
 import { PostsProvider } from 'contexts/PostsContext'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Open_Sans({ subsets: ['latin'] })
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
         <LoaderPageProvider>
           <>
           <Loader/>
+          <SpeedInsights/>
           <LanguageModalProvider>
             <MenuMobileProvider>
               <PostsProvider>
