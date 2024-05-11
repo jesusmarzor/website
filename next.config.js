@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: [process.env.NEXT_PUBLIC_SUPABASE_URL],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: process.env.NEXT_PUBLIC_SUPABASE_URL,
+                pathname: '**'
+            }
+        ]
     },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         config.externals.push({
